@@ -1,5 +1,5 @@
 import pytest
-from playwright.sync_api import sync_playwright, expect
+from playwright.sync_api import sync_playwright, expect, Page
 
 @pytest.mark.regression
 @pytest.mark.courses
@@ -51,3 +51,25 @@ def test_empty_courses_list():
         load_result_text = page.get_by_test_id('courses-list-empty-view-description-text')
         expect(load_result_text).to_be_visible()
         expect(load_result_text).to_have_text('Results from the load test pipeline will be displayed here')
+
+
+@pytest.mark.regression
+@pytest.mark.courses
+def test_empty_courses_list2(chromium_page_with_state: Page):
+
+    chromium_page_with_state.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses")
+
+    course_icon = chromium_page_with_state.get_by_test_id('courses-list-toolbar-title-text')
+    expect(course_icon).to_be_visible()
+    expect(course_icon).to_have_text('Courses')
+
+    file_icon = chromium_page_with_state.get_by_test_id('courses-list-empty-view-icon')
+    expect(file_icon).to_be_visible()
+
+    result_text = chromium_page_with_state.get_by_test_id('courses-list-empty-view-title-text')
+    expect(result_text).to_be_visible()
+    expect(result_text).to_have_text('There is no results')
+
+    load_result_text = chromium_page_with_state.get_by_test_id('courses-list-empty-view-description-text')
+    expect(load_result_text).to_be_visible()
+    expect(load_result_text).to_have_text('Results from the load test pipeline will be displayed here')
