@@ -1,6 +1,9 @@
 import pytest
 from playwright.sync_api import sync_playwright, expect, Page
 
+from pages.courses_list_page import CoursesListPage
+from pages.create_course_page import CreateCoursePage
+
 @pytest.mark.regression
 @pytest.mark.courses
 def test_empty_courses_list():
@@ -73,3 +76,40 @@ def test_empty_courses_list2(chromium_page_with_state: Page):
     load_result_text = chromium_page_with_state.get_by_test_id('courses-list-empty-view-description-text')
     expect(load_result_text).to_be_visible()
     expect(load_result_text).to_have_text('Results from the load test pipeline will be displayed here')
+
+
+@pytest.mark.regression
+@pytest.mark.courses
+def test_create_course(courses_list_page: CoursesListPage, create_course_page: CreateCoursePage):
+    create_course_page.visit('https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create')
+    # Проверен заголовок "Create course"
+    create_course_page.check_visible_create_course_title()
+    # Проверено, что кнопка создания курса disabled
+    create_course_page.check_disabled_create_course_button()
+    # Проверен пустой предпросмотр изображения
+    create_course_page.check_visible_image_preview_empty_view()
+    # Проверен блок загрузки изображения в состоянии без выбранной картинки
+    create_course_page.check_visible_image_upload_view(is_image_uploaded=False)
+    # Проверена форма со значениями по умолчанию
+    create_course_page.check_visible_create_course_form(title="", description="", estimated_time="", max_score="0", min_score="0")
+    # Проверен заголовок "Exercises"
+    create_course_page.check_visible_exercises_title()
+    # Проверена кнопка создания задания
+    create_course_page.check_visible_create_exercise_button()
+    # Проверен пустой блок заданий
+    create_course_page.check_visible_exercises_empty_view()
+    # Загружено изображение
+    create_course_page.upload_preview_image("C:/Users/rain1/PycharmProjects/autotests-ui/testdata/files/image.jpg")
+    # Проверен блок загрузки в состоянии после успешной загрузки
+    create_course_page.check_visible_image_upload_view(is_image_uploaded=True)
+    # Форма заполнена значениями
+    create_course_page.fill_create_course_form(title="Playwright", description="Playwright", estimated_time="2 weeks", max_score="100", min_score="10")
+    # Нажата кнопка создания курса
+    create_course_page.click_create_course_button()
+
+    # Проверен заголовок "Courses"
+    courses_list_page.check_visible_courses_title()
+    # Проверена кнопка создания курса
+    courses_list_page.check_visible_create_course_button()
+    # Проверена карточка созданного курса
+    courses_list_page.check_visible_course_card(index=0, title="Playwright", estimated_time="2 weeks", max_score="100", min_score="10")
