@@ -4,78 +4,70 @@ from playwright.sync_api import sync_playwright, expect, Page
 from pages.courses_list_page import CoursesListPage
 from pages.create_course_page import CreateCoursePage
 
+# @pytest.mark.regression
+# @pytest.mark.courses
+# def test_empty_courses_list():
+#     # Открываем браузер с использованием Playwright
+#     with sync_playwright() as playwright:
+#         # Запускаем Chromium браузер в обычном режиме (не headless)
+#         browser = playwright.chromium.launch(headless=False)
+#         # Создаем новый контекст браузера (новая сессия, которая изолирована от других)
+#         context = browser.new_context()
+#         # Открываем новую страницу в рамках контекста
+#         page = context.new_page()
+#
+#         page.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/registration")
+#
+#         email_input = page.get_by_test_id('registration-form-email-input').locator('input')
+#         email_input.fill('user.name@gmail.com')
+#
+#         username_input = page.get_by_test_id('registration-form-username-input').locator('input')
+#         username_input.fill('username')
+#
+#         password_input = page.get_by_test_id('registration-form-password-input').locator('input')
+#         password_input.fill('password')
+#
+#         registration_button = page.get_by_test_id('registration-page-registration-button')
+#         registration_button.click()
+#
+#         # Сохраняем состояние браузера (куки и localStorage) в файл для дальнейшего использования
+#         context.storage_state(path="browser-state.json")
+#
+#     with sync_playwright() as playwright:
+#         browser = playwright.chromium.launch(headless=False)
+#         context = browser.new_context(storage_state="browser-state.json")  # Указываем файл с сохраненным состоянием
+#         page = context.new_page()
+#
+#         page.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses")
+#
+#         course_icon = page.get_by_test_id('courses-list-toolbar-title-text')
+#         expect(course_icon).to_be_visible()
+#         expect(course_icon).to_have_text('Courses')
+#
+#         file_icon = page.get_by_test_id('courses-list-empty-view-icon')
+#         expect(file_icon).to_be_visible()
+#
+#         result_text = page.get_by_test_id('courses-list-empty-view-title-text')
+#         expect(result_text).to_be_visible()
+#         expect(result_text).to_have_text('There is no results')
+#
+#         load_result_text = page.get_by_test_id('courses-list-empty-view-description-text')
+#         expect(load_result_text).to_be_visible()
+#         expect(load_result_text).to_have_text('Results from the load test pipeline will be displayed here')
+
+
 @pytest.mark.regression
 @pytest.mark.courses
-def test_empty_courses_list():
-    # Открываем браузер с использованием Playwright
-    with sync_playwright() as playwright:
-        # Запускаем Chromium браузер в обычном режиме (не headless)
-        browser = playwright.chromium.launch(headless=False)
-        # Создаем новый контекст браузера (новая сессия, которая изолирована от других)
-        context = browser.new_context()
-        # Открываем новую страницу в рамках контекста
-        page = context.new_page()
+def test_empty_courses_list2(courses_list_page: CoursesListPage):
+    courses_list_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses")
 
-        page.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/registration")
+    courses_list_page.sidebar.click_courses()
+    courses_list_page.sidebar.check_visible()
+    courses_list_page.navbar.check_visible("username")
 
-        email_input = page.get_by_test_id('registration-form-email-input').locator('input')
-        email_input.fill('user.name@gmail.com')
-
-        username_input = page.get_by_test_id('registration-form-username-input').locator('input')
-        username_input.fill('username')
-
-        password_input = page.get_by_test_id('registration-form-password-input').locator('input')
-        password_input.fill('password')
-
-        registration_button = page.get_by_test_id('registration-page-registration-button')
-        registration_button.click()
-
-        # Сохраняем состояние браузера (куки и localStorage) в файл для дальнейшего использования
-        context.storage_state(path="browser-state.json")
-
-    with sync_playwright() as playwright:
-        browser = playwright.chromium.launch(headless=False)
-        context = browser.new_context(storage_state="browser-state.json")  # Указываем файл с сохраненным состоянием
-        page = context.new_page()
-
-        page.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses")
-
-        course_icon = page.get_by_test_id('courses-list-toolbar-title-text')
-        expect(course_icon).to_be_visible()
-        expect(course_icon).to_have_text('Courses')
-
-        file_icon = page.get_by_test_id('courses-list-empty-view-icon')
-        expect(file_icon).to_be_visible()
-
-        result_text = page.get_by_test_id('courses-list-empty-view-title-text')
-        expect(result_text).to_be_visible()
-        expect(result_text).to_have_text('There is no results')
-
-        load_result_text = page.get_by_test_id('courses-list-empty-view-description-text')
-        expect(load_result_text).to_be_visible()
-        expect(load_result_text).to_have_text('Results from the load test pipeline will be displayed here')
-
-
-@pytest.mark.regression
-@pytest.mark.courses
-def test_empty_courses_list2(chromium_page_with_state: Page):
-
-    chromium_page_with_state.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses")
-
-    course_icon = chromium_page_with_state.get_by_test_id('courses-list-toolbar-title-text')
-    expect(course_icon).to_be_visible()
-    expect(course_icon).to_have_text('Courses')
-
-    file_icon = chromium_page_with_state.get_by_test_id('courses-list-empty-view-icon')
-    expect(file_icon).to_be_visible()
-
-    result_text = chromium_page_with_state.get_by_test_id('courses-list-empty-view-title-text')
-    expect(result_text).to_be_visible()
-    expect(result_text).to_have_text('There is no results')
-
-    load_result_text = chromium_page_with_state.get_by_test_id('courses-list-empty-view-description-text')
-    expect(load_result_text).to_be_visible()
-    expect(load_result_text).to_have_text('Results from the load test pipeline will be displayed here')
+    courses_list_page.check_visible_courses_title()
+    courses_list_page.check_visible_create_course_button()
+    courses_list_page.check_visible_empty_view()
 
 
 @pytest.mark.regression
