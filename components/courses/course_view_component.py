@@ -1,5 +1,5 @@
 from components.base_component import BaseComponent
-from playwright.sync_api import Page, expect
+from playwright.sync_api import Page
 
 from components.courses.course_view_menu_component import CourseViewMenuComponent
 from elements.image import Image
