@@ -1,10 +1,27 @@
 import pytest
+import allure
+
 from pages.courses.courses_list_page import CoursesListPage
 from pages.courses.create_course_page import CreateCoursePage
 
+from allure_commons.types import Severity
+from tools.allure.tags import AllureTags
+from tools.allure.epics import AllureEpics
+from tools.allure.stories import AllureStories
+from tools.allure.features import AllureFeatures
+
 @pytest.mark.regression
 @pytest.mark.courses
+@allure.tag(AllureTags.REGRESSION, AllureTags.COURSES)
+@allure.epic(AllureEpics.LMS)
+@allure.feature(AllureFeatures.COURSES)
+@allure.story(AllureStories.COURSES)
+@allure.severity(Severity.NORMAL)
+@allure.parent_suite(AllureEpics.LMS)
+@allure.suite(AllureFeatures.COURSES)
+@allure.sub_suite(AllureStories.COURSES)
 class TestCourses:
+    @allure.title("Проверка отображения пустого списка курсов")
     def test_empty_courses_list(self, courses_list_page: CoursesListPage):
         courses_list_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses")
 
@@ -16,6 +33,9 @@ class TestCourses:
         courses_list_page.toolbar_view.check_visible()
         courses_list_page.check_visible_empty_view()
 
+
+    @allure.title("Проверка создания курса")
+    @allure.severity(Severity.CRITICAL)
     def test_create_course(self, courses_list_page: CoursesListPage, create_course_page: CreateCoursePage):
         create_course_page.visit(
             'https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create')
@@ -63,6 +83,8 @@ class TestCourses:
             min_score="10"
         )
 
+    @allure.title("Проверка редактирования курса")
+    @allure.severity(Severity.NORMAL)
     def test_edit_course(self, courses_list_page: CoursesListPage, create_course_page: CreateCoursePage):
         courses_list_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create")
         create_course_page.image_upload_widget.upload_preview_image("./testdata/files/image.jpg")
