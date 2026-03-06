@@ -8,7 +8,7 @@ class BaseElement:
         self.locator = locator
 
     @property
-    def type_of(self):
+    def type_of(self) -> str:
         return "base element"
 
     # Метод принимает кейворд аргументы (kwargs)

@@ -9,7 +9,8 @@ class BasePage:
 
     def visit(self, url: str): # Метод для открытия ссылок
         with allure.step(f'Opening the url "{url}"'):
-            self.page.goto(url, wait_until='networkidle')
+            self.page.goto(url, wait_until='domcontentloaded')
+            #self.page.goto(url, wait_until='networkidle')
 
     def reload(self):  # Метод для перезагрузки страницы
         with allure.step(f'Reloading page with url "{self.page.url}"'):
