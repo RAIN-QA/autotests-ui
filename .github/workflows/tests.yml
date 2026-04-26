@@ -48,8 +48,8 @@ jobs:
           path: allure-results
 
 publish-report:
-  if: always()
   needs: [ run-tests ]
+  if: always()
   runs-on: ubuntu-latest
 
   steps:
@@ -60,7 +60,7 @@ publish-report:
         path: gh-pages
 
     - name: Download Allure results
-      uses: actions/download-artifact@v7
+      uses: actions/download-artifact@v5
       with:
         name: allure-results
         path: allure-results
