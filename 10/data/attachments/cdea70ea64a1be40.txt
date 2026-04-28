@@ -1,0 +1,118 @@
+INFO     BASE_PAGE:base_page.py:17 Opening the url "AppRoute.DASHBOARD"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = dashboard-drawer-list-item-button" at index "0"
+INFO     BASE_ELEMENT:base_element.py:31 Clicking button "Button"
+INFO     BASE_COMPONENT:base_component.py:19 Checking that current url matches pattern ".*/#/dashboard"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = logout-drawer-list-item-icon" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that icon "Icon" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = logout-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that text "Title" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = logout-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:45 Checking that text "Title" has text "Logout"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = logout-drawer-list-item-button" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that button "Button" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = courses-drawer-list-item-icon" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that icon "Icon" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = courses-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that text "Title" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = courses-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:45 Checking that text "Title" has text "Courses"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = courses-drawer-list-item-button" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that button "Button" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = dashboard-drawer-list-item-icon" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that icon "Icon" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = dashboard-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that text "Title" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = dashboard-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:45 Checking that text "Title" has text "Dashboard"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = dashboard-drawer-list-item-button" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that button "Button" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = navigation-navbar-app-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that text "App Title" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = navigation-navbar-app-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:45 Checking that text "App Title" has text "UI Course"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = navigation-navbar-welcome-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that text "Welcome Title" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = navigation-navbar-welcome-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:45 Checking that text "Welcome Title" has text "Welcome, username!"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = dashboard-toolbar-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that text "Title" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = dashboard-toolbar-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:45 Checking that text "Title" has text "Dashboard"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = students-widget-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that text "Title" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = students-widget-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:45 Checking that text "Title" has text "Students"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = students-bar-chart" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that image "Chart" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = courses-widget-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that text "Title" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = courses-widget-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:45 Checking that text "Title" has text "Courses"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = courses-pie-chart" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that image "Chart" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = scores-widget-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that text "Title" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = scores-widget-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:45 Checking that text "Title" has text "Scores"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = scores-scatter-chart" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that image "Chart" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = activities-widget-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that text "Title" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = activities-widget-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:45 Checking that text "Title" has text "Activities"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-test-id = activities-line-chart" at index "0"
+INFO     BASE_ELEMENT:base_element.py:38 Checking that image "Chart" is visible
+ERROR    asyncio:base_events.py:1890 Exception in callback Connection.dispatch.<locals>._done_callback() at /opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_connection.py:466
+handle: <Handle Connection.dispatch.<locals>._done_callback() at /opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_connection.py:466>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/asyncio/events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_connection.py", line 467, in _done_callback
+    exc = future.exception()
+  File "/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_page.py", line 297, in _on_route
+    handled = await route_handler.handle(route)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_helper.py", line 422, in handle
+    return await self._handle_internal(route)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_helper.py", line 464, in _handle_internal
+    return await handled_future
+           ^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+ERROR    asyncio:base_events.py:1890 Exception in callback Connection.dispatch.<locals>._done_callback() at /opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_connection.py:466
+handle: <Handle Connection.dispatch.<locals>._done_callback() at /opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_connection.py:466>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/asyncio/events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_connection.py", line 467, in _done_callback
+    exc = future.exception()
+  File "/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_page.py", line 297, in _on_route
+    handled = await route_handler.handle(route)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_helper.py", line 422, in handle
+    return await self._handle_internal(route)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_helper.py", line 464, in _handle_internal
+    return await handled_future
+           ^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+ERROR    asyncio:base_events.py:1890 Exception in callback Connection.dispatch.<locals>._done_callback() at /opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_connection.py:466
+handle: <Handle Connection.dispatch.<locals>._done_callback() at /opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_connection.py:466>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/asyncio/events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_connection.py", line 467, in _done_callback
+    exc = future.exception()
+  File "/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_page.py", line 297, in _on_route
+    handled = await route_handler.handle(route)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_helper.py", line 422, in handle
+    return await self._handle_internal(route)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/playwright/_impl/_helper.py", line 464, in _handle_internal
+    return await handled_future
+           ^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
